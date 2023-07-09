@@ -1,5 +1,7 @@
 import pandas as pd
+
 from clase import *
+from fuzzywuzzy import fuzz
 
 # Ejercicio 1:
 # Completar el método is_hot_in_pehuajo con el siguiente objetivo:
@@ -126,9 +128,9 @@ def validate_discount_code():
                 
                     for codigo in _AVAILABLE_DISCOUNT_CODES:
                         
-                        dif_caracteres = sum(c1 != c2 for c1, c2 in zip(cod_dscto, codigo))
+                        similitud = fuzz.ratio(cod_dscto.lower(), codigo.lower())
                         
-                        if dif_caracteres < 3:
+                        if similitud > 82:
                             
                             return True, True
                     
