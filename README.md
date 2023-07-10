@@ -11,4 +11,9 @@ requests==2.31.0 <br>
 
 **Recomendación** <br>
 Una vez bajado el proyecto, crear un entorno virtual para realizar la instalación de las librerias mediante el archivo requerimientos.txt <br>
-Correr comando pip install -r requerimientos.txt
+
+Con el entorno virtual ya activado, correr comando *pip install -r requerimientos.txt* 
+
+Para ejecutar el programa correr comando *python main.py*
+
+
